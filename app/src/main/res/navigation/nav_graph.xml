@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="eu.tutorial.fetchnewsapi.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" >
+            <argument
+                android:name="title"
+                app:argType="string" />
+            <argument
+                android:name="imageurl"
+                app:argType="string" />
+            <argument
+                android:name="description"
+                app:argType="string" />
+            <argument
+                android:name="url"
+                app:argType="string" />
+            <argument
+                android:name="categories"
+                app:argType="string" />
+            <argument
+                android:name="source"
+                app:argType="string" />
+            <argument
+                android:name="published_at"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" >
+            <argument
+                android:name="returnFromHome"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="eu.tutorial.fetchnewsapi.fragment.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="eu.tutorial.fetchnewsapi.fragment.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" >
+            <argument
+                android:name="selectedLanguage"
+                app:argType="string" />
+        </action>
+    </fragment>
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FetchNewsAPI</string>
+    <string name="start">Start</string>
+    <string name="welcome">Welcome\nChoose language</string>
+    <string name="read_more">Read more</string>
+    <string name="categories">Categories</string>
+    <string name="published">Published by</string>
+    <string name="save_preference">Save this choice</string>
+</resources>
